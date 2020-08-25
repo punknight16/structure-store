@@ -1,0 +1,52 @@
+{
+	"main": "bin/www",
+  "name": "store",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node -r esm ./bin/www",
+    "delegate": "node -r esm src/delegate.js",
+    "db-init": "node -r esm src/init.js",
+    "db-clean": "node -r esm src/init.js -c",
+    "test": "mocha -r esm ",
+    "build": "babel "
+  },
+  "dependencies": {
+    "@google-cloud/bigquery": "^4.7.0",
+    "axios": "^0.19.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "bcrypt": "^3.0.6",
+    "bcrypt-nodejs": "^0.0.3",
+    "commander": "^2.20.0",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.4",
+    "debug": "~2.6.9",
+    "esm": "^3.2.25",
+    "express": "~4.16.1",
+    "express-session": "^1.16.2",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mongo-json-escape": "0.0.1",
+    "mongodb": "^3.2.7",
+    "morgan": "~1.9.1",
+    "passport": "^0.4.0",
+    "passport-google-oauth": "^2.0.0",
+    "passport-local": "^1.0.0",
+    "placeholder-shared": "../shared",
+    "request": "^2.88.0",
+    "request-promise-native": "^1.0.7",
+    "snowflake-sdk": "^1.5.2",
+    "swagger-jsdoc": "^4.0.0",
+    "swagger-ui-express": "^4.1.4",
+    "uuid": "^7.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.4",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.4",
+    "@babel/preset-react": "^7.0.0",
+    "mocha": "^6.1.4",
+    "nodemon": "^2.0.4"
+  }
+}
